@@ -7,12 +7,12 @@ public interface IPersonaService {
     
     public List<Persona> verPersonas ();
     
-    public void crearPersona (Persona per);
+    public String crearPersona (Persona per);
     
-    public void borrarPersona (Long id);
+    public String borrarPersona (Long idpersona);
     
-    public Persona buscarPersona (Long id);
+    public Persona buscarPersona (Long idpersona);
     
-    public void modifPersona (Persona per);
+    public String modifPersona (Persona per);
     
 }

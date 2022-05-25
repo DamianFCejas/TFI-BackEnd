@@ -20,8 +20,9 @@ public class controller {
     private IPersonaService persoServ;
     
     @PostMapping ("/new/persona")
-    public void agregarPersona (@RequestBody Persona pers) {
+    public String agregarPersona (@RequestBody Persona pers) {
         persoServ.crearPersona(pers);
+        return "La persona fue creada con éxito!";
     }
     
     @GetMapping ("/ver/personas")
@@ -31,14 +32,16 @@ public class controller {
     }
     
     @DeleteMapping ("/delete/{idpersona}")
-    public void borrarPersona (@PathVariable Long idpersona) {
+    public String borrarPersona (@PathVariable Long idpersona) {
         persoServ.borrarPersona(idpersona);
+        return "La persona fue eliminada con éxito!";
         
     }
     
     @PutMapping ("/put/persona")
-    public void modifPersona (@RequestBody Persona perso) {
+    public String modifPersona (@RequestBody Persona perso) {
         persoServ.modifPersona(perso);
+        return "La persona fue modificada con éxito!";
     }
     
 }

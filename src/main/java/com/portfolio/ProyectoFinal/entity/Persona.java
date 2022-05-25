@@ -1,4 +1,4 @@
-    package com.portfolio.ProyectoFinal.entity;
+package com.portfolio.ProyectoFinal.entity;
 
 
 import javax.persistence.Entity;

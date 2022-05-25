@@ -19,23 +19,26 @@ public class PersonaService implements IPersonaService{
     }
 
     @Override
-    public void crearPersona(Persona per) {
+    public String crearPersona(Persona per) {
         persoRepo.save(per);
+        return "La persona fue creada con éxito!";
     }
 
     @Override
-    public void borrarPersona(Long id) {
-        persoRepo.deleteById(id);
+    public String borrarPersona(Long idpersona) {
+        persoRepo.deleteById(idpersona);
+        return "La persona fue eliminada con éxito!";
     }
 
     @Override
-    public Persona buscarPersona(Long id) {
-        return persoRepo.findById(id).orElse(null);                
+    public Persona buscarPersona(Long idpersona) {
+        return persoRepo.findById(idpersona).orElse(null);                
     }
     
     @Override
-    public void modifPersona(Persona person) {
+    public String modifPersona(Persona person) {
         persoRepo.save(person);
+        return "La persona fue modificada con éxito!";
     }
     
 }
