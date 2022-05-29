@@ -19,26 +19,26 @@ public class controllerTipoEmpleo {
     @Autowired
     private ITipoEmpleo tipoEmServ;
     
-    @PostMapping ("/new/tipoempleo")
+    @PostMapping ("/tipoempleo/new")
     public String agregarTipoEmpleo (@RequestBody TipoEmpleo tipoEm) {
     tipoEmServ.crearTipoEmpleo(tipoEm);
     return "El tipo de empleo fue creado con éxito!";
     }
     
-    @GetMapping ("/ver/tiposempleo")
+    @GetMapping ("/tipoempleo/ver")
     @ResponseBody
     public List<TipoEmpleo> verTipoEmpleo (){
     return tipoEmServ.verTipoEmpleo();
     }
     
-    @DeleteMapping ("/delete/tipoempleo/{idtipoempleo}")
+    @DeleteMapping ("/tipoempleo/delete/{idtipoempleo}")
     public String borrarTipoEmpleo (@PathVariable Long idtipoempleo) {
         tipoEmServ.borrarTipoEmpleo(idtipoempleo);
         return "El tipo de empleo fue eliminado con éxito!";
         
     }
     
-    @PutMapping ("/put/tipoempleo")
+    @PutMapping ("/tipoempleo/put")
     public String modifTipoEmpleo (@RequestBody TipoEmpleo tipoEm) {
         tipoEmServ.modifTipoEmpleo(tipoEm);
         return "El tipo de empleo fue modificado con éxito!";

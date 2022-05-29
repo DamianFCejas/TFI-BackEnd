@@ -19,25 +19,25 @@ public class controllerHyss {
     @Autowired
     private IHyss hyssServ;
     
-    @PostMapping ("/new/hyss")
+    @PostMapping ("/hyss/new")
     public String agregarHyss (@RequestBody Hyss hardyss) {
     hyssServ.crearHyss(hardyss);
     return "La habilidad fue creada con éxito!";
     }
     
-    @GetMapping ("/ver/hyss")
+    @GetMapping ("/hyss/ver")
     @ResponseBody
     public List<Hyss> verHyss (){
     return hyssServ.verHyss();
     }
     
-    @DeleteMapping ("/delete/hyss/{idhyss}")
+    @DeleteMapping ("/hyss/delete/{idhyss}")
     public String borrarHyss (@PathVariable Long idhyss) {
     hyssServ.borrarHyss(idhyss);
     return "La habilidad fue eliminada con éxito!";
     }
     
-    @PutMapping ("/put/hyss")
+    @PutMapping ("/hyss/put")
     public String modifHyss (@RequestBody Hyss hardyss) {
         hyssServ.modifHyss(hardyss);
     return "La habilidad fue modificada con éxito!";
