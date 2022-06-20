@@ -32,9 +32,8 @@ public class EducacionController {
     }
     
     @DeleteMapping("/educacion/{id}")
-    public String borrarEducacion(@PathVariable Integer id) {
+    public void borrarEducacion(@PathVariable Integer id) {
         service.borrarEducacion(id);
-        return "El registro fue eliminado con éxito!";
     }
     
     @GetMapping("/educacion/{id}")
@@ -44,9 +43,8 @@ public class EducacionController {
     }
     
     @PutMapping("/educacion/update")
-    public String modificarEducacion(@RequestBody Educacion educacion) {
+    public void modificarEducacion(@RequestBody Educacion educacion) {
         System.out.println(educacion);
         service.modificarEducacion(educacion);
-        return "El registro fue modificado con éxito!";
     }
 }
