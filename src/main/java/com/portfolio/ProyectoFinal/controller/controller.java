@@ -45,7 +45,7 @@ public class controller {
     
     @GetMapping ("/persona/perfil"/*si se pone id cambiante puede ser: "/persona/{idpersona}*/)
     public Persona buscarPersona(/*con id cambiante se debe agregar acá: @PathVariable Long idpersona*/){
-        return persoServ.buscarPersona((long)1/*con id cambiante se debe agregar acá: idpersona*/);
+        return persoServ.buscarPersona((long)3/*con id cambiante se debe agregar acá: idpersona*/);
     }
     
 }
