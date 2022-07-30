@@ -39,9 +39,8 @@ public class controller {
     }
     
     @PutMapping ("/persona/put")
-    public String modifPersona (@RequestBody Persona perso) {
+    public void modifPersona (@RequestBody Persona perso) {
         persoServ.modifPersona(perso);
-        return "La persona fue modificada con éxito!";
     }
     
     @GetMapping ("/persona/perfil"/*si se pone id cambiante puede ser: "/persona/{idpersona}*/)

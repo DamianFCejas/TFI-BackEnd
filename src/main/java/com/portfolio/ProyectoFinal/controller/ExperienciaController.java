@@ -42,10 +42,9 @@ public class ExperienciaController {
     }
     
     @PutMapping("/experiencia/update")
-    public String modificarExperiencia(@RequestBody Experiencia experiencia) {
+    public void modificarExperiencia(@RequestBody Experiencia experiencia) {
         System.out.println(experiencia);
         service.modificarExperiencia(experiencia);
-        return "El registro fue modificado con éxito!";
     }
     
 }

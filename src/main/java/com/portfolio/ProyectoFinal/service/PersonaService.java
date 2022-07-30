@@ -36,9 +36,8 @@ public class PersonaService implements IPersonaService{
     }
     
     @Override
-    public String modifPersona(Persona person) {
+    public void modifPersona(Persona person) {
         persoRepo.save(person);
-        return "La persona fue modificada con éxito!";
     }
     
 }

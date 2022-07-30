@@ -19,27 +19,23 @@ public class HyssService implements IHyss {
     }
 
     @Override
-    public String crearHyss(Hyss hardyss) {
+    public Hyss crearHyss(Hyss hardyss) {
+        return hardyssRepo.save(hardyss);
+    }
+
+    @Override
+    public void borrarHyss(Integer id) {
+        hardyssRepo.deleteById(id);
+    }
+
+    @Override
+    public Hyss buscarHyss(Integer id) {
+        return hardyssRepo.findById(id).orElse(null);
+    }
+
+    @Override
+    public void modifHyss(Hyss hardyss) {
         hardyssRepo.save(hardyss);
-        return "La habilidad fue creada con éxito!";
-    }
-
-    @Override
-    public String borrarHyss(Long idhyss) {
-        hardyssRepo.deleteById(idhyss);
-        return "La habilidad fue eliminada con éxito!";
-    }
-
-    @Override
-    public Hyss buscarHyss(Long idhyss) {
-        return hardyssRepo.findById(idhyss).orElse(null);
-        
-    }
-
-    @Override
-    public String modifHyss(Hyss hardyss) {
-        hardyssRepo.save(hardyss);
-        return "La habilidad fue modificada con éxito!";
-    }
+    }    
     
 }

@@ -13,6 +13,6 @@ public interface IPersonaService {
     
     public Persona buscarPersona (Long idpersona);
     
-    public String modifPersona (Persona per);
+    public void modifPersona (Persona per);
     
 }
