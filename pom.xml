@@ -63,17 +63,7 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			
-                        <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-compiler-plugin</artifactId>
-                                <configuration>
-                                    <maven.compiler.release>11</maven.compiler.release>
-
-                                </configuration>
-                            </plugin>
-		</plugins>
+		
 	</build>
 
 </project>
