@@ -15,6 +15,10 @@
 - [x] (GITHUB) Crear los repositorios para las capas Front-End y Back-End, e ir subiendo el avance de las capas del proyecto al repositorio que corresponda
 - [x] Publicar el portfolio web y usarlo como carta de presentación en el mercado laboral
 
+y además también:
+
+- [x] es responsivo
+
 ## Instalación
 
 Este proyecto fue generado con SpringBoot y conecta con bases de datos (MySQL) usando API de Java Persistencia (JPA).
