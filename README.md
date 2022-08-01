@@ -17,7 +17,7 @@
 
 y además también:
 
-- [x] es responsivo
+- [x] es responsivo :muscle:
 
 ___
 
